@@ -13,7 +13,7 @@
 
 1. Store an ISO file of Guest OS installer.
 
-(picture)
+![iso-images.png](pictures/iso-images.png)
 
 2. Create two VMs -- **101** and **102**.
    - General
@@ -48,11 +48,11 @@
 3. Open a console of the created VM and start it.  
    Install AlmaLinux OS 9.2.
 
-(picture)
+![vm-console.png](pictures/vm-console.png)
 
 4. Add a hard disk to the VMs for mirror disk resource.
 
-(picture)
+![vm-hardware-add.png](pictures/vm-hardware-add.png)
 
 5. Connect to the VMs via SSH.
 
