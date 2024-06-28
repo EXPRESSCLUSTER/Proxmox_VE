@@ -48,7 +48,7 @@ $ virt-install --name proxmox-test \
    - User name: root
    - Password: <the_password_you_entered>
 
-## What is inside?
+## What is inside of Proxmox VE?
 
 OS version
 
