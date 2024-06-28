@@ -47,3 +47,93 @@ $ virt-install --name proxmox-test \
    Login with the following user account.
    - User name: root
    - Password: <the_password_you_entered>
+
+## What is inside?
+
+OS version
+
+```
+# cat /etc/os-release 
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+```
+
+Kernel version
+
+```
+# uname -r
+6.8.4-2-pve
+```
+
+Installed packages
+
+```
+# dpkg -l | grep proxmox
+ii  libproxmox-acme-perl                 1.5.0                               all          Proxmox ACME integration perl library
+ii  libproxmox-acme-plugins              1.5.0                               all          Proxmox acme.sh wrapper for DNS API plugins
+ii  libproxmox-backup-qemu0              1.4.1                               amd64        Proxmox Backup Server client library for QEMU
+ii  libproxmox-rs-perl                   0.3.3                               amd64        PVE/PMG common perl parts for Rust perlmod bindings
+ii  proxmox-archive-keyring              3.0                                 all          Proxmox APT archive keyring
+ii  proxmox-backup-client                3.2.0-1                             amd64        Proxmox Backup Client tools
+ii  proxmox-backup-file-restore          3.2.0-1                             amd64        Proxmox Backup single file restore tools for pxar and block device backups
+ii  proxmox-backup-restore-image         0.6.1                               amd64        Kernel/initramfs images for Proxmox Backup single-file restore.
+ii  proxmox-default-kernel               1.1.0                               all          Default Proxmox Kernel Image
+ii  proxmox-firewall                     0.3.0                               amd64        Proxmox's nftables-based firewall written in rust
+ii  proxmox-kernel-6.8                   6.8.4-2                             all          Latest Proxmox Kernel Image
+ii  proxmox-kernel-6.8.4-2-pve-signed    6.8.4-2                             amd64        Proxmox Kernel Image (signed)
+ii  proxmox-kernel-helper                8.1.0                               all          Function for various kernel maintenance tasks.
+ii  proxmox-mail-forward                 0.2.3                               amd64        Proxmox mail forward helper
+ii  proxmox-mini-journalreader           1.4.0                               amd64        Minimal systemd Journal Reader
+ii  proxmox-offline-mirror-docs          0.6.6                               all          Proxmox offline repository mirror and subscription key manager
+ii  proxmox-offline-mirror-helper        0.6.6                               amd64        Proxmox offline repository mirror and subscription key manager helper
+ii  proxmox-termproxy                    1.0.1                               amd64        Wrapper proxy for executing programs in the system terminal
+ii  proxmox-ve                           8.2.0                               all          Proxmox Virtual Environment
+ii  proxmox-websocket-tunnel             0.2.0-1                             amd64        Proxmox websocket tunneling helper
+ii  proxmox-widget-toolkit               4.2.1                               all          Core Widgets and ExtJS Helper Classes for Proxmox Web UIs
+```
+
+Disk configuration
+
+```
+# lsblk
+NAME                         MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0                           11:0    1    2K  0 rom  
+vda                          253:0    0  100G  0 disk 
+├─vda1                       253:1    0 1007K  0 part 
+├─vda2                       253:2    0  512M  0 part 
+└─vda3                       253:3    0 99.5G  0 part 
+  ├─pve-swap                 252:0    0  7.7G  0 lvm  [SWAP]
+  ├─pve-root                 252:1    0   35G  0 lvm  /
+  ├─pve-data_tmeta           252:2    0    1G  0 lvm  
+  │ └─pve-data-tpool         252:4    0 42.5G  0 lvm  
+  │   ├─pve-data             252:5    0 42.5G  1 lvm  
+  │   ├─pve-vm--100--disk--0 252:6    0   16G  0 lvm  
+  │   ├─pve-vm--101--disk--0 252:7    0   16G  0 lvm  
+  │   ├─pve-vm--100--disk--1 252:8    0    2G  0 lvm  
+  │   └─pve-vm--101--disk--1 252:9    0    2G  0 lvm  
+  └─pve-data_tdata           252:3    0 42.5G  0 lvm  
+    └─pve-data-tpool         252:4    0 42.5G  0 lvm  
+      ├─pve-data             252:5    0 42.5G  1 lvm  
+      ├─pve-vm--100--disk--0 252:6    0   16G  0 lvm  
+      ├─pve-vm--101--disk--0 252:7    0   16G  0 lvm  
+      ├─pve-vm--100--disk--1 252:8    0    2G  0 lvm  
+      └─pve-vm--101--disk--1 252:9    0    2G  0 lvm
+
+# df -h
+Filesystem            Size  Used Avail Use% Mounted on
+udev                  3.9G     0  3.9G   0% /dev
+tmpfs                 785M  896K  785M   1% /run
+/dev/mapper/pve-root   35G   13G   20G  40% /
+tmpfs                 3.9G   43M  3.8G   2% /dev/shm
+tmpfs                 5.0M     0  5.0M   0% /run/lock
+/dev/fuse             128M   16K  128M   1% /etc/pve
+tmpfs                 785M     0  785M   0% /run/user/0
+```
+
