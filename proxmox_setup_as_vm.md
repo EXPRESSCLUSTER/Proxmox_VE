@@ -97,6 +97,36 @@ ii  proxmox-termproxy                    1.0.1                               amd
 ii  proxmox-ve                           8.2.0                               all          Proxmox Virtual Environment
 ii  proxmox-websocket-tunnel             0.2.0-1                             amd64        Proxmox websocket tunneling helper
 ii  proxmox-widget-toolkit               4.2.1                               all          Core Widgets and ExtJS Helper Classes for Proxmox Web UIs
+
+# dpkg -l | grep pve-
+ii  libpve-access-control                8.1.4                               all          Proxmox VE access control library
+ii  libpve-apiclient-perl                3.3.2                               all          Proxmox VE API client library
+ii  libpve-cluster-api-perl              8.0.6                               all          Proxmox Virtual Environment cluster Perl API modules.
+ii  libpve-cluster-perl                  8.0.6                               all          Proxmox Virtual Environment cluster Perl modules.
+ii  libpve-common-perl                   8.2.1                               all          Proxmox VE base library
+ii  libpve-guest-common-perl             5.1.1                               all          Proxmox VE common guest-related modules
+ii  libpve-http-server-perl              5.1.0                               all          Proxmox Asynchrounous HTTP Server Implementation
+ii  libpve-network-perl                  0.9.8                               all          Proxmox VE's SDN (Software Defined Network) stack
+ii  libpve-notify-perl                   8.0.6                               all          Notify helper module.
+ii  libpve-rs-perl                       0.8.8                               amd64        PVE parts which have been ported to Rust - Rust source code
+ii  libpve-storage-perl                  8.2.1                               all          Proxmox VE storage management library
+ii  libpve-u2f-server-perl               1.2.0                               amd64        Perl bindings for libu2f-server
+ii  proxmox-kernel-6.8.4-2-pve-signed    6.8.4-2                             amd64        Proxmox Kernel Image (signed)
+ii  pve-cluster                          8.0.6                               amd64        "pmxcfs" distributed cluster filesystem for Proxmox Virtual Environment.
+ii  pve-container                        5.0.10                              all          Proxmox VE Container management tool
+ii  pve-docs                             8.2.1                               all          Proxmox VE Documentation
+ii  pve-edk2-firmware                    4.2023.08-4                         all          edk2 based UEFI firmware modules for virtual machines
+ii  pve-edk2-firmware-legacy             4.2023.08-4                         all          edk2 based legacy 2MB UEFI firmware modules for virtual machines
+ii  pve-edk2-firmware-ovmf               4.2023.08-4                         all          edk2 based UEFI firmware modules for virtual machines
+ii  pve-esxi-import-tools                0.7.0                               amd64        Tools to allow importing VMs from ESXi hosts
+ii  pve-firewall                         5.0.5                               amd64        Proxmox VE Firewall
+ii  pve-firmware                         3.11-1                              all          Binary firmware code for the pve-kernel
+ii  pve-ha-manager                       4.0.4                               amd64        Proxmox VE HA Manager
+ii  pve-i18n                             3.2.2                               all          Internationalization support for Proxmox VE
+ii  pve-lxc-syscalld                     1.3.0                               amd64        PVE LXC syscall daemon
+ii  pve-manager                          8.2.2                               amd64        Proxmox Virtual Environment Management Tools
+ii  pve-qemu-kvm                         8.1.5-5                             amd64        Full virtualization on x86 hardware
+ii  pve-xtermjs                          5.3.0-3                             all          HTML/TypeScript based fully-featured terminal for Proxmox projects
 ```
 
 Disk configuration
