@@ -21,4 +21,17 @@ This means that even if the EXPRESSCLUSTER cluster, which normally operates on 2
 
 ## Demonstoration
 
-TBA
+1. Start each node on a separate Proxmox VE host.
+   - For instance, configure such that Node 1 is running on Host 1, and Node 2 is running on Host 2.
+
+2. Confirm that all the failover groups and monitor resources are in a normal state with EXPRESSCLUSTER.
+   - Assume the failover group is running on the Node 1 side.
+
+3. Log into Host 1 where Node 1 is running and force it to shut down using the command: `poweroff -f -f`
+
+4. Confirm that the failover group has failed over to Node 2.
+   - Recognize that the cluster is now operating on just a single node.
+
+5. After waiting, the HA function of Proxmox VE will detect that Node 1 is stopped, and Node 1 will be automatically started on a surviving host.
+
+6. By waiting further, the rebooted Node 1 will return to the EXPRESSCLUSTER cluster, thereby letting the cluster return to operating on two nodes.
