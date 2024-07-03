@@ -9,7 +9,7 @@ This means that even if the EXPRESSCLUSTER cluster, which normally operates on 2
 ## Procedures
 
 1. Prepare a cluster and Ceph storage.
-   Refer to [this document](/setup_cluster_and_ceph.md)
+   Refer to [this document](/setup_cluster_and_ceph.md).
 
 2. Create a two VMs.
    - Make sure it is necessary to specify a pool of Ceph as VM's storage in Disks tab.
