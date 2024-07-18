@@ -13,3 +13,7 @@ Official website: https://www.proxmox.com/
 
 - [How to setup a cluster with EXPRESSCLUSTER on VMs](/setup_guest_os_cluster.md)
 - [Combination of EXPRESSCLUSTER and the HA function of Proxmox VE](/ecx_cluster_with_pve_ha.md)
+
+## Links
+
+- [A sample of force stop script for Proxmox VE](https://github.com/EXPRESSCLUSTER/ForceStop/blob/main/Proxmox_VE/forcestop.sh)
