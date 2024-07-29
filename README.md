@@ -16,4 +16,4 @@ Official website: https://www.proxmox.com/
 
 ## Links
 
-- [A sample of force stop script for Proxmox VE](https://github.com/EXPRESSCLUSTER/ForceStop/blob/main/Proxmox_VE/forcestop.sh)
+- [A sample of force stop script for Proxmox VE](https://github.com/EXPRESSCLUSTER/ForceStop/blob/main/Proxmox_VE/)
