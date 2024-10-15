@@ -6,6 +6,7 @@ Official website: https://www.proxmox.com/
 
 ## Knowledge about Proxmox VE
 
+- [How to setup Proxmox VE on a physical server](/Proxmox-VE-Physical-Server-Quick-Start-Guide.md)
 - [How to setup Proxmox VE on KVM/Qemu environment](/proxmox_setup_as_vm.md)
 - [How to setup a cluster and Ceph for Proxmox VE](/setup_cluster_and_ceph.md)
 
